@@ -1,0 +1,10 @@
+.SearchBox__input {
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-family: 'IBM plex mono', monospace;
+  font-style: italic;
+  font-size: 0.7rem;
+  width: 50%;
+}

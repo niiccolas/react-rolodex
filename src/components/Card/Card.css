@@ -1,0 +1,39 @@
+.Card {
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  background-color: #eefaff;
+  transition: all 0.10s ease-out;
+  user-select: none;
+  overflow: hidden;
+}
+
+.Card:hover {
+  transform: scale(1.02);
+  background-color: #c7edfd;
+}
+
+.Card:active {
+  transform: scale(0.95);
+  background-color: #a0dcfc;
+}
+
+.Card__img {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.Card__title {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.Card__footer {
+  font-size: 0.6rem;
+  color: darkblue;
+  text-decoration: underline;
+}

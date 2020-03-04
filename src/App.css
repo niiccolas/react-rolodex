@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 1rem;
+  text-align: center;
+  font-family: 'IBM plex mono', monospace;
+}
+
+.App__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
