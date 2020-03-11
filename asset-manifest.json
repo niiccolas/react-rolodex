@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-rolodex/static/css/main.96e8b64d.chunk.css",
-    "main.js": "/react-rolodex/static/js/main.1ac703dc.chunk.js",
-    "main.js.map": "/react-rolodex/static/js/main.1ac703dc.chunk.js.map",
+    "main.css": "/react-rolodex/static/css/main.b1e2bad8.chunk.css",
+    "main.js": "/react-rolodex/static/js/main.df5452de.chunk.js",
+    "main.js.map": "/react-rolodex/static/js/main.df5452de.chunk.js.map",
     "runtime-main.js": "/react-rolodex/static/js/runtime-main.2d9657f3.js",
     "runtime-main.js.map": "/react-rolodex/static/js/runtime-main.2d9657f3.js.map",
-    "static/js/2.f943915f.chunk.js": "/react-rolodex/static/js/2.f943915f.chunk.js",
-    "static/js/2.f943915f.chunk.js.map": "/react-rolodex/static/js/2.f943915f.chunk.js.map",
+    "static/js/2.2af2bf7c.chunk.js": "/react-rolodex/static/js/2.2af2bf7c.chunk.js",
+    "static/js/2.2af2bf7c.chunk.js.map": "/react-rolodex/static/js/2.2af2bf7c.chunk.js.map",
     "index.html": "/react-rolodex/index.html",
-    "precache-manifest.638b9fe4d873e4ce8e42c946e347fcd8.js": "/react-rolodex/precache-manifest.638b9fe4d873e4ce8e42c946e347fcd8.js",
+    "precache-manifest.7c0e774b023c90bfac789d7354a057a5.js": "/react-rolodex/precache-manifest.7c0e774b023c90bfac789d7354a057a5.js",
     "service-worker.js": "/react-rolodex/service-worker.js",
-    "static/css/main.96e8b64d.chunk.css.map": "/react-rolodex/static/css/main.96e8b64d.chunk.css.map",
-    "static/js/2.f943915f.chunk.js.LICENSE.txt": "/react-rolodex/static/js/2.f943915f.chunk.js.LICENSE.txt"
+    "static/css/main.b1e2bad8.chunk.css.map": "/react-rolodex/static/css/main.b1e2bad8.chunk.css.map",
+    "static/js/2.2af2bf7c.chunk.js.LICENSE.txt": "/react-rolodex/static/js/2.2af2bf7c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2d9657f3.js",
-    "static/js/2.f943915f.chunk.js",
-    "static/css/main.96e8b64d.chunk.css",
-    "static/js/main.1ac703dc.chunk.js"
+    "static/js/2.2af2bf7c.chunk.js",
+    "static/css/main.b1e2bad8.chunk.css",
+    "static/js/main.df5452de.chunk.js"
   ]
 }
