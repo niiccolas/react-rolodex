@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import { CardList } from './components/CardList/CardList';
 import { SearchBox } from './components/SearchBox/SearchBox';
 
+require('dotenv').config();
+const {
+  REACT_APP_API_KEY: AI_API_KEY,
+  REACT_APP_API_URL: AI_API_URL
+} = process.env;
 const APP_TITLE = 'R_Rolodex';
-const NUM_USERS = 15;
-// A class component gives us access to `setState()` method + `this.state` object
+const NUM_ROLODEX_CARDS = 15;
+
+/**
+ * Build query string for the AI Portraits API
+ * @param  {} gender
+ */
+const aiPortraits = (gender = 'female', emotion = 'joy', age = 'young-adult') =>
+  `${AI_API_URL}/v1/faces?gender=${gender}&emotion=${emotion}&age=${age}&api_key=${AI_API_KEY}`;
+
 class App extends Component {
   constructor() {
     super(); // call to the Component class
@@ -20,31 +33,22 @@ class App extends Component {
   componentDidMount = async () => {
     try {
       const usersApi = await fetch(
-        `https://randomuser.me/api/?nat=us,dk,fr,gb&page=1&results=${NUM_USERS}`
+        `https://randomuser.me/api/?nat=us,dk,fr,gb&page=1&results=${NUM_ROLODEX_CARDS}`
       );
       const { results: users } = await usersApi.json();
 
-      const females = await fetch(
-        `https://api.generated.photos/api/v1/faces?gender=female&emotion=joy&age=young-adult&api_key=RmggqtzTU2z8vP7m8rYqDw`
-      );
+      const females = await fetch(aiPortraits('female'));
       const femaleAvatars = await females.json();
 
-      const males = await fetch(
-        `https://api.generated.photos/api/v1/faces?gender=male&emotion=joy&age=young-adult&api_key=RmggqtzTU2z8vP7m8rYqDw`
-      );
+      const males = await fetch(aiPortraits('male'));
       const maleAvatars = await males.json();
 
-      const userPortraits = await fetch(
-        `https://api.generated.photos/api/v1/faces?per_page=${NUM_USERS}&emotion=joy&age=young-adult&api_key=RmggqtzTU2z8vP7m8rYqDw`
-      );
-      const { faces: avatars } = await userPortraits.json();
-
+      // Populate `randomuser` API return with AI generated portraits from the `generated.photos` API
       users.forEach(user => {
         user.avatar =
           user.gender === 'female'
             ? femaleAvatars.faces.pop()
             : maleAvatars.faces.pop();
-        // (user.avatar = )
       });
 
       this.setState({
